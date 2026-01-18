@@ -1,0 +1,29 @@
+# Node / tooling
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Vite intermediates
+.vite/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Temporary
+tmp/
+
+# Build output is docs/ — keep it tracked for GitHub Pages
+# (dist/ and other build artifacts should not be committed)

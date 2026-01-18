@@ -1,0 +1,26 @@
+{
+  "name": "libre-places",
+  "version": "0.1.0",
+  "description": "Lightweight offline place logger with MapLibre GL JS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "budo -d docs --live",
+    "lint": "eslint --ext .ts,.js src",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "maplibre-gl": "^4.0.0",
+    "maplibre-gl-layer-control": "^0.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "budo": "^11.8.4",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}

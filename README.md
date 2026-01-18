@@ -75,6 +75,20 @@ Compatibility Notes
 - Rendering: DOM Markers with emoji + label (no sprite atlas)
 - Data model: GeoJSON FeatureCollection
   - Properties: `id`, `label`, `emoji`, `category?`, `timestamp?`
+- Basemap: [Protomaps Basemap](https://protomaps.com/)
+  - Tile URL: `https://tunnel.optgeo.org/martin/protomaps-basemap` (tile.json)
+  - Style: Standard Protomaps style (optimized for web)
+  - Lightweight, efficient vector tiles suitable for offline and mobile use
+- Terrain (optional layer):
+  - [Mapterhorn Terrarium Tiles](https://mapterhorn.org/)
+  - URL: `https://tunnel.optgeo.org/martin/mapterhorn`
+  - Format: 512×512 WebP Terrarium tiles for elevation representation
+- UI Controls:
+  - `NavigationControl` (zoom, compass)
+  - `ScaleControl` (distance reference)
+  - [maplibre-gl-layer-control](https://github.com/opengeos/maplibre-gl-layer-control) for layer toggling
+  - Controls positioned per MapLibre GL JS defaults (primarily top-right)
+  - Map state via URL fragment: `hash: 'map'` (center, zoom, bearing, pitch)
 - Storage:
   - MVP: `localStorage` with versioned key `mlgl:places:v1`
   - Optional: IndexedDB via localForage
@@ -84,6 +98,7 @@ Compatibility Notes
   - Output: `docs/` (static site for GitHub Pages)
   - Base: `./` (relative paths)
   - Asset filenames: no hashes (stable `./assets/...` references)
+- Static preview: `budo -d docs` (no Python HTTP server)
 - Commands: Justfile wraps `npm run dev`, `npm run build`, `npm run preview`, etc.
 - Hosting: GitHub Pages (Source: main branch / docs folder)
 - Language: English-only in the initial phase; i18n deferred (Japanese priority later)
