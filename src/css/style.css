@@ -1,0 +1,112 @@
+/* Base styles for libre-places */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Map container */
+#map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* MapLibre GL JS controls styling */
+.maplibregl-control {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.maplibregl-control button {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  transition: background-color 0.2s ease;
+}
+
+.maplibregl-control button:hover {
+  background-color: #f0f0f0;
+}
+
+.maplibregl-control button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #0099ff;
+}
+
+/* Navigation control compass */
+.maplibregl-ctrl-compass {
+  width: 36px;
+  height: 36px;
+}
+
+/* Scale control */
+.maplibregl-ctrl-scale {
+  border: 1px solid #999;
+  border-top: none;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Layer control (from maplibre-gl-layer-control) */
+.maplibregl-ctrl-layer-group {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.maplibregl-ctrl-layer-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  user-select: none;
+}
+
+.maplibregl-ctrl-layer-group input[type='checkbox'],
+.maplibregl-ctrl-layer-group input[type='radio'] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .maplibregl-control {
+    border-radius: 2px;
+    font-size: 14px;
+  }
+
+  .maplibregl-control button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Attribution */
+.maplibregl-ctrl-attrib {
+  font-size: 12px;
+}
+
+.maplibregl-ctrl-attrib a {
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.maplibregl-ctrl-attrib a:hover {
+  text-decoration: underline;
+}
