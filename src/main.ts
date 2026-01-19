@@ -2,11 +2,28 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { LayerControl } from 'maplibre-gl-layer-control';
 import 'maplibre-gl-layer-control/style.css';
+import { LIGHT, layers } from '@protomaps/basemaps';
 
-// Initialize MapLibre GL JS map with Protomaps Basemap
+// Basemap source URL (Protomaps tiles via tunnel.optgeo.org)
+const BASEMAP_SOURCE = 'https://tunnel.optgeo.org/martin/protomaps-basemap';
+
+// Generate Protomaps Basemap light style
+const lightStyle = {
+  version: 8,
+  sources: {
+    protomaps: {
+      type: 'vector',
+      url: BASEMAP_SOURCE
+    }
+  },
+  layers: layers(BASEMAP_SOURCE, LIGHT),
+  glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf'
+};
+
+// Initialize MapLibre GL JS map with Protomaps Basemap light style
 const map = new maplibregl.Map({
   container: 'map',
-  style: 'https://tunnel.optgeo.org/martin/protomaps-basemap',
+  style: lightStyle,
   center: [106.816666, -6.200000],
   zoom: 12,
   hash: 'map' // Enable URL fragment state syncing

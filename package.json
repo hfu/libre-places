@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@protomaps/basemaps": "^5.7.0",
     "maplibre-gl": "^4.0.0",
     "maplibre-gl-layer-control": "^0.2.0"
   },
