@@ -16,7 +16,7 @@ const lightStyle = {
       url: BASEMAP_SOURCE
     }
   },
-  layers: layers(BASEMAP_SOURCE, LIGHT),
+  layers: layers('protomaps', LIGHT),
   glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf'
 };
 
